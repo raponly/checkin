@@ -4,13 +4,13 @@ const glados = async () => {
   try {
     const headers = {
       'cookie': cookie,
-      'referer': 'https://glados.rocks/console/checkin',
-      'user-agent': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)',
+      'authorization': '35760725020723938811840811722317-2560-1440',
+      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36',
     }
     const checkin = await fetch('https://glados.rocks/api/user/checkin', {
       method: 'POST',
       headers: { ...headers, 'content-type': 'application/json' },
-      body: '{"token":"glados.network"}',
+      body: '{"token":"glados.one"}',
     }).then((r) => r.json())
     const status = await fetch('https://glados.rocks/api/user/status', {
       method: 'GET',
